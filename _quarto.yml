@@ -1,5 +1,16 @@
 project:
-  title: "Liseko"
+  title: "Practical Submission"
+  type: book
+  output-dir: _book
 
-editor: visual
+book: 
+  title: "Practical"
+  chapters: 
+    - index.qmd
+    - Prac1.qmd
+    - Prac2.qmd
+    - Prac4.qmd
 
+format:
+  html:
+    code-fold: true
