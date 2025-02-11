@@ -79,7 +79,7 @@ w
 
 #Plot Origional data vs smoothed data
 plot(x, y,pch = 16)
-points(x, h$y_hat, col = "red",type="l",lwd=2) 
+points(x, h$y_hat, col = "red",type="l",lwd=2) #plot
 ```
 
 
