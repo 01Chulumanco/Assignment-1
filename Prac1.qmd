@@ -48,6 +48,13 @@ beta = solve(t(Design)%*%Design)%*%t(Design)%*%Response
 beta
 ```
 
+##Question 4
+
+```{r}
+#Use lm function to estimate beta
+model = lm(dist~speed,Data_cars)
+summary(model)
+```
 
 
 
