@@ -1,0 +1,54 @@
+---
+title: "Prac1"
+format: html
+---
+
+##Question 1
+
+```{r}
+rm(list=ls())
+
+#Find rows that have NA
+data("airquality")
+airquality
+na_rows = airquality[rowSums(is.na(airquality))>0,]
+na_rows
+```
+
+##Question 2
+```{r}
+#Calculate means
+mean_ozone = mean(airquality$Ozone,na.rm=TRUE)
+mean_temp  = mean(airquality$Temp,na.rm=TRUE)
+
+#Calculate standard deviations
+sd_ozone = sd(airquality$Ozone,na.rm=TRUE)
+sd_temp  = sd(airquality$Temp,na.rm=TRUE)
+
+#Find maximum values
+max_ozone = max(airquality$Ozone,na.rm=TRUE)
+max_temp  = max(airquality$Temp,na.rm=TRUE)
+```
+
+## Question 3
+```{r}
+data("cars")
+Data_cars = data.frame(cars)
+
+#The response variable
+Response  = as.vector(Data_cars$dist)
+
+#The design matrix
+Design    = cbind(1,Data_cars$speed)
+
+#Calculate beta
+
+beta = solve(t(Design)%*%Design)%*%t(Design)%*%Response
+
+beta
+```
+
+
+
+
+
